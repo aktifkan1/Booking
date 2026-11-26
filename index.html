@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Booking Jadwal Lapangan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px #00000018;
+        }
+        .peringatan {
+            color: #d62828;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .keterangan {
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="peringatan">⚠️MOHON DI BACA DAN DI CERMATI SAMPAI BAWAH‼️</div>
+        <div class="keterangan">
+            Bisa diinfokan lebih detail rencana tanggal dan jamnya? Nanti kami bantu cek ketersediaan jadwalnya.<br><br>
+            <strong>Booking jadwal wajib di isi</strong>
+        </div>
+
+        <form action="kirim.php" method="POST">
+            <div class="form-group">
+                <label>➡️ Nama</label>
+                <input type="text" name="nama" placeholder="Isi nama anda" required>
+            </div>
+            <div class="form-group">
+                <label>➡️ Tggl</label>
+                <input type="text" name="tggl" placeholder="Contoh: 26 November 2026" required>
+            </div>
+            <div class="form-group">
+                <label>➡️ Mulai main/sampai jam</label>
+                <input type="text" name="jam" placeholder="Contoh: 16.00 - 18.00" required>
+            </div>
+            <div class="form-group">
+                <label>➡️ Main berapa jam</label>
+                <input type="text" name="durasi" placeholder="Contoh: 2 Jam" required>
+            </div>
+            <div class="form-group">
+                <label>➡️ Booking berapa lapangan</label>
+                <input type="text" name="lapangan" placeholder="Contoh: 1 Lapangan" required>
+            </div>
+            <button type="submit">KIRIM BOOKING</button>
+        </form>
+    </div>
+</body>
+</html>
